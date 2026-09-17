@@ -121,114 +121,95 @@ body {
   font-size: 14px;
   color: #96a0ba;
 }
-
 /* =========================
-   EmoTik emotion flower
-   Inspired by the idea of an emotion wheel
+   EmoTik Emotion Flower
 ========================= */
 
 .emotion-flower-wrap {
   position: relative;
-  width: 170px;
-  height: 170px;
-  margin: 24px auto 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 18px;
 }
 
 .emotion-flower-wrap::before {
   content: "";
   position: absolute;
-  width: 138px;
-  height: 138px;
+  inset: 18px;
   border-radius: 50%;
+
   background:
     radial-gradient(
       circle,
-      rgba(255, 255, 255, 0.88) 0%,
-      rgba(239, 238, 255, 0.38) 42%,
-      rgba(225, 239, 255, 0.18) 66%,
-      transparent 74%
+      rgba(201, 194, 255, 0.30),
+      rgba(198, 224, 255, 0.18) 48%,
+      transparent 72%
     );
-  filter: blur(2px);
+
+  filter: blur(15px);
 }
 
 .emotion-flower {
   position: relative;
-  width: 138px;
-  height: 138px;
-  overflow: visible;
+  width: 160px;
+  height: 160px;
+
+  filter:
+    drop-shadow(0 12px 24px rgba(93, 88, 165, 0.10));
 }
 
 .emotion-flower .petal {
-  transform-origin: 69px 69px;
+  stroke-width: 1.2;
 }
 
-.emotion-flower .petal-shape {
-  fill: rgba(255, 255, 255, 0.62);
-  stroke-width: 1.15;
-  transition: opacity 0.25s ease;
+.petal-1 {
+  fill: rgba(131, 115, 211, 0.25);
+  stroke: rgba(112, 96, 191, 0.48);
 }
 
-.emotion-flower .petal-1 .petal-shape {
-  fill: rgba(146, 132, 219, 0.18);
-  stroke: rgba(126, 111, 204, 0.34);
+.petal-2 {
+  fill: rgba(113, 143, 218, 0.23);
+  stroke: rgba(94, 124, 198, 0.44);
 }
 
-.emotion-flower .petal-2 .petal-shape {
-  fill: rgba(120, 157, 218, 0.17);
-  stroke: rgba(102, 142, 201, 0.32);
+.petal-3 {
+  fill: rgba(102, 184, 205, 0.22);
+  stroke: rgba(82, 159, 183, 0.42);
 }
 
-.emotion-flower .petal-3 .petal-shape {
-  fill: rgba(111, 188, 204, 0.16);
-  stroke: rgba(94, 166, 184, 0.30);
+.petal-4 {
+  fill: rgba(135, 190, 167, 0.22);
+  stroke: rgba(107, 165, 140, 0.40);
 }
 
-.emotion-flower .petal-4 .petal-shape {
-  fill: rgba(143, 193, 171, 0.16);
-  stroke: rgba(116, 169, 148, 0.30);
+.petal-5 {
+  fill: rgba(224, 192, 117, 0.21);
+  stroke: rgba(194, 161, 91, 0.39);
 }
 
-.emotion-flower .petal-5 .petal-shape {
-  fill: rgba(224, 197, 126, 0.15);
-  stroke: rgba(196, 167, 102, 0.28);
+.petal-6 {
+  fill: rgba(224, 151, 144, 0.21);
+  stroke: rgba(195, 126, 120, 0.39);
 }
 
-.emotion-flower .petal-6 .petal-shape {
-  fill: rgba(222, 157, 149, 0.15);
-  stroke: rgba(196, 133, 127, 0.28);
+.petal-7 {
+  fill: rgba(205, 136, 174, 0.22);
+  stroke: rgba(179, 111, 151, 0.40);
 }
 
-.emotion-flower .petal-7 .petal-shape {
-  fill: rgba(206, 143, 177, 0.16);
-  stroke: rgba(179, 122, 154, 0.29);
+.petal-8 {
+  fill: rgba(174, 128, 207, 0.23);
+  stroke: rgba(148, 104, 183, 0.42);
 }
 
-.emotion-flower .petal-8 .petal-shape {
-  fill: rgba(177, 137, 208, 0.17);
-  stroke: rgba(151, 116, 185, 0.30);
-}
-
-.emotion-flower .inner-ring {
-  fill: rgba(255, 255, 255, 0.72);
-  stroke: rgba(120, 125, 180, 0.16);
+.flower-center-ring {
+  fill: rgba(255, 255, 255, 0.68);
+  stroke: rgba(122, 119, 182, 0.20);
   stroke-width: 1;
 }
 
-.emotion-flower .core {
-  fill: rgba(116, 111, 191, 0.72);
-}
-
-.emotion-flower .core-glow {
-  fill: rgba(255, 255, 255, 0.78);
-}
-
-.emotion-flower {
-  filter:
-    drop-shadow(0 10px 20px rgba(94, 96, 150, 0.08));
+.flower-center {
+  fill: rgba(112, 107, 188, 0.72);
 }
     
 /* =========================
@@ -478,45 +459,87 @@ footer strong {
   ========================== -->
 
   <header class="hero">
-    <div class="container">
+  <div class="container">
 
-      <h1 class="brand">EmoTik</h1>
+    <div class="emotion-flower-wrap" aria-hidden="true">
+      <svg
+        class="emotion-flower"
+        viewBox="0 0 160 160"
+        xmlns="http://www.w3.org/2000/svg"
+      >
 
-      <p class="tagline">
-        Untangle Thoughts.
-      </p>
+        <g transform="translate(80 80)">
 
-      <p class="hero-description">
-        Support, privacy and legal information for EmoTik.
-      </p>
+          <ellipse class="petal petal-1"
+            cx="0" cy="-42" rx="18" ry="34" />
 
-      <div class="hero-thread" aria-hidden="true">
-  <span class="thread-line thread-line-1"></span>
-  <span class="thread-line thread-line-2"></span>
-  <span class="thread-line thread-line-3"></span>
-  <span class="thread-knot"></span>
-</div>
+          <ellipse class="petal petal-2"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(45)" />
 
-      <div class="language-switch">
-        <button
-          id="englishButton"
-          class="active"
-          onclick="switchLanguage('en')"
-        >
-          English
-        </button>
+          <ellipse class="petal petal-3"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(90)" />
 
-        <button
-          id="japaneseButton"
-          onclick="switchLanguage('ja')"
-        >
-          日本語
-        </button>
-      </div>
+          <ellipse class="petal petal-4"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(135)" />
 
+          <ellipse class="petal petal-5"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(180)" />
+
+          <ellipse class="petal petal-6"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(225)" />
+
+          <ellipse class="petal petal-7"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(270)" />
+
+          <ellipse class="petal petal-8"
+            cx="0" cy="-42" rx="18" ry="34"
+            transform="rotate(315)" />
+
+          <circle class="flower-center-ring"
+            cx="0" cy="0" r="27" />
+
+          <circle class="flower-center"
+            cx="0" cy="0" r="10" />
+
+        </g>
+      </svg>
     </div>
-  </header>
 
+    <h1 class="brand">EmoTik</h1>
+
+    <p class="tagline">
+      Untangle Thoughts.
+    </p>
+
+    <p class="hero-description">
+      Support, privacy and legal information for EmoTik.
+    </p>
+
+    <div class="language-switch">
+      <button
+        id="englishButton"
+        class="active"
+        onclick="switchLanguage('en')"
+      >
+        English
+      </button>
+
+      <button
+        id="japaneseButton"
+        onclick="switchLanguage('ja')"
+      >
+        日本語
+      </button>
+    </div>
+
+  </div>
+</header>
 
   <main class="container">
 
