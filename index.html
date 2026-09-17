@@ -3,78 +3,748 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EmoTik - Support & Privacy Policy</title>
+
+  <title>EmoTik - Support & Legal</title>
+
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 24px; color: #2d3748; background: #fafafa; }
-    h1 { color: #1a202c; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
-    h2 { color: #2d3748; margin-top: 32px; border-bottom: 1px solid #edf2f7; padding-bottom: 4px; }
-    a { color: #3182ce; }
-    .box { background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 24px; }
-    .lang-section { margin-bottom: 48px; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      line-height: 1.75;
+      color: #334155;
+      background: #f8fafc;
+    }
+
+    .container {
+      width: min(100% - 32px, 800px);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       Hero
+    ========================= */
+
+    .hero {
+      text-align: center;
+      padding: 64px 20px 40px;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #1e293b;
+    }
+
+    .tagline {
+      margin: 6px 0 0;
+      font-size: 17px;
+      color: #64748b;
+    }
+
+    .hero-description {
+      max-width: 520px;
+      margin: 18px auto 0;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    /* =========================
+       Language switch
+    ========================= */
+
+    .language-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .language-switch button {
+      appearance: none;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #64748b;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .language-switch button:hover {
+      border-color: #cbd5e1;
+    }
+
+    .language-switch button.active {
+      background: #334155;
+      color: #ffffff;
+      border-color: #334155;
+    }
+
+    /* =========================
+       Main sections
+    ========================= */
+
+    main {
+      padding-bottom: 64px;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+
+    h2 {
+      margin: 42px 0 14px;
+      font-size: 21px;
+      color: #1e293b;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #334155;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ol,
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 14px;
+    }
+
+    a {
+      color: #4f6f9f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       Cards
+    ========================= */
+
+    .box {
+      background: #ffffff;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+    }
+
+    .support-card {
+      text-align: center;
+      padding: 30px 24px;
+    }
+
+    .support-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .email-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: #334155;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .email-button:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .faq-item:first-child {
+      padding-top: 0;
+    }
+
+    .faq-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .faq-item p {
+      margin: 6px 0 0;
+      color: #64748b;
+    }
+
+    /* =========================
+       Legal
+    ========================= */
+
+    .effective-date {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .notice {
+      padding: 18px 20px;
+      margin-top: 18px;
+      background: #f8fafc;
+      border-radius: 12px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+      text-align: center;
+      padding: 30px 20px 46px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #64748b;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 48px;
+      }
+
+      .brand {
+        font-size: 34px;
+      }
+
+      .box {
+        padding: 20px;
+        border-radius: 14px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- English Section (Primary for App Review) -->
-  <div class="lang-section">
-    <h1>EmoTik - Support & Privacy Policy</h1>
+  <!-- =========================
+       Header
+  ========================== -->
 
-    <h2>Support & Contact</h2>
-    <div class="box">
-      <p>If you have any questions, feedback, or issues regarding EmoTik, please contact us at:</p>
-      <p><strong>Email:</strong> <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a></p>
-      <p>We typically respond within 2-3 business days.</p>
+  <header class="hero">
+    <div class="container">
+
+      <h1 class="brand">EmoTik</h1>
+
+      <p class="tagline">
+        Untangle Thoughts.
+      </p>
+
+      <p class="hero-description">
+        Support, privacy and legal information for EmoTik.
+      </p>
+
+      <div class="language-switch">
+        <button
+          id="englishButton"
+          class="active"
+          onclick="switchLanguage('en')"
+        >
+          English
+        </button>
+
+        <button
+          id="japaneseButton"
+          onclick="switchLanguage('ja')"
+        >
+          日本語
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- ==================================================
+         ENGLISH
+    =================================================== -->
+
+    <div id="englishSection" class="lang-section active">
+
+      <h2>Support & Contact</h2>
+
+      <div class="box support-card">
+        <h3>Need help with EmoTik?</h3>
+
+        <p>
+          If you have questions, feedback, or experience an issue,
+          please contact us by email.
+        </p>
+
+        <a
+          class="email-button"
+          href="mailto:emotikhelpdesk@outlook.jp"
+        >
+          emotikhelpdesk@outlook.jp
+        </a>
+
+        <p style="margin-top: 16px; font-size: 13px; color: #94a3b8;">
+          We typically respond within 2–3 business days.
+        </p>
+      </div>
+
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="box">
+
+        <div class="faq-item">
+          <h3>What is EmoTik?</h3>
+          <p>
+            EmoTik is an AI-assisted reflection app designed to help you
+            organize thoughts and put difficult-to-express feelings into words.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is EmoTik a medical or mental health treatment service?</h3>
+          <p>
+            No. EmoTik is intended for personal reflection and self-understanding.
+            It does not provide medical diagnosis, treatment, or professional
+            mental health advice.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Where are my saved reflections stored?</h3>
+          <p>
+            Reflections and history saved in EmoTik are stored locally
+            on your device.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does EmoTik send text to an AI service?</h3>
+          <p>
+            Yes. Text submitted for AI analysis is sent through an encrypted
+            connection via our proxy server to the Google Gemini API
+            so that EmoTik can generate reflection and reframing suggestions.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do in-app purchases work?</h3>
+          <p>
+            Purchases are processed by Apple through the App Store and StoreKit.
+            EmoTik does not receive or store your payment card information.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is EmoTik Colors?</h3>
+          <p>
+            EmoTik Colors is a one-time purchase that unlocks additional
+            visual themes. It does not provide unlimited AI analysis.
+          </p>
+        </div>
+
+      </div>
+
+
+      <h2>Privacy Policy</h2>
+
+      <div class="box">
+
+        <p class="effective-date">
+          <strong>Effective Date:</strong> September 4, 2026
+        </p>
+
+        <p>
+          EmoTik is committed to protecting your privacy.
+          This policy explains how information is handled when you use the app.
+        </p>
+
+        <ol>
+
+          <li>
+            <strong>Account and Personal Information</strong><br>
+            EmoTik does not require account registration or login.
+            We do not intentionally collect your name, phone number,
+            email address, or other account-based personally identifiable information.
+          </li>
+
+          <li>
+            <strong>AI Processing</strong><br>
+            Text you submit for AI analysis is transmitted over encrypted
+            connections through our proxy server to the Google Gemini API
+            for the purpose of generating emotional reflection,
+            organization, and reframing suggestions.
+
+            Google may retain limited request and response data for security,
+            abuse prevention, or service operation in accordance with its
+            applicable terms.
+
+            When paid Gemini API services are used, prompts and responses
+            are not used by Google to train or improve its AI models
+            without permission.
+          </li>
+
+          <li>
+            <strong>Local Storage</strong><br>
+            Saved reflections, analysis results, notes, preferences,
+            and history are stored locally on your device.
+
+            EmoTik does not maintain a remote account-based database
+            of your journal history.
+          </li>
+
+          <li>
+            <strong>Third-Party Services</strong><br>
+            EmoTik uses Google Gemini for AI processing,
+            Apple StoreKit for in-app purchases,
+            and RevenueCat for purchase-related functionality.
+
+            These services may process limited technical or
+            transaction-related information as necessary
+            to provide their respective services.
+          </li>
+
+          <li>
+            <strong>In-App Purchases</strong><br>
+            Purchases are processed through Apple's App Store and StoreKit.
+            EmoTik does not receive or store your credit card
+            or payment card information.
+          </li>
+
+          <li>
+            <strong>Data Retention and Deletion</strong><br>
+            Locally stored EmoTik records can be removed by deleting them
+            within the app or by deleting the app from your device.
+
+            Data processed by third-party services is handled according
+            to the retention policies of those services.
+          </li>
+
+        </ol>
+
+        <div class="notice">
+          AI-generated results are intended to provide perspectives for
+          personal reflection. They do not constitute medical,
+          psychological, or other professional diagnosis or treatment.
+        </div>
+
+      </div>
+
+
+      <h2>Terms of Use</h2>
+
+      <div class="box">
+
+        <p>
+          EmoTik uses Apple's Standard End User License Agreement (EULA).
+          By using EmoTik, you agree to the applicable terms.
+        </p>
+
+        <p>
+          <a
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Apple's Standard EULA
+          </a>
+        </p>
+
+      </div>
+
     </div>
 
-    <h2>Privacy Policy</h2>
-    <div class="box">
-      <p><strong>Effective Date:</strong> September 4, 2026</p>
-      <p>EmoTik is committed to protecting your privacy. This policy explains how we handle your information.</p>
-      <ol>
-        <li><strong>Data Collection:</strong> We do not collect personally identifiable information (PII). We do not require accounts, logins, or names.</li>
-        <li><strong>AI Processing:</strong> Thought texts you input are transmitted securely via encrypted connections to our secure proxy and Google Gemini API exclusively for the purpose of emotional reframing. Inputs are processed ephemerally and are not saved permanently or used to train third-party public AI models.</li>
-        <li><strong>Local Storage:</strong> Your decoded thoughts, notes, and local app preferences are stored strictly on your device's local memory and are never uploaded to any remote server.</li>
-        <li><strong>In-App Purchases:</strong> Subscriptions are managed entirely by Apple StoreKit. We do not store or process your financial data.</li>
-      </ol>
+
+    <!-- ==================================================
+         JAPANESE
+    =================================================== -->
+
+    <div id="japaneseSection" class="lang-section">
+
+      <h2>お問い合わせ・サポート</h2>
+
+      <div class="box support-card">
+
+        <h3>EmoTikについてお困りですか？</h3>
+
+        <p>
+          ご質問、不具合のご報告、ご意見などがございましたら、
+          下記メールアドレスまでお問い合わせください。
+        </p>
+
+        <a
+          class="email-button"
+          href="mailto:emotikhelpdesk@outlook.jp"
+        >
+          emotikhelpdesk@outlook.jp
+        </a>
+
+      </div>
+
+
+      <h2>よくある質問</h2>
+
+      <div class="box">
+
+        <div class="faq-item">
+          <h3>EmoTikとは何ですか？</h3>
+          <p>
+            EmoTikは、頭の中で絡まった思考や
+            言葉にしにくい感情をAIと一緒に整理するための
+            リフレクションアプリです。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>医療・心理療法のためのアプリですか？</h3>
+          <p>
+            いいえ。EmoTikは自分の気持ちを振り返り、
+            自己理解のきっかけをつくることを目的としています。
+            医療上の診断、治療、専門的な心理相談を提供するものではありません。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>保存した記録はどこに保存されますか？</h3>
+          <p>
+            EmoTikで保存した振り返りや履歴は、
+            ユーザーの端末内に保存されます。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>入力した文章はAIサービスへ送信されますか？</h3>
+          <p>
+            はい。AI解析を行う際には、入力されたテキストが
+            暗号化された通信を通じて当アプリの中継サーバーおよび
+            Google Gemini APIへ送信されます。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>アプリ内課金はどのように処理されますか？</h3>
+          <p>
+            アプリ内課金はAppleのApp StoreおよびStoreKitを通じて
+            処理されます。開発者がクレジットカード番号等の
+            決済情報を取得・保存することはありません。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>EmoTik Colorsとは何ですか？</h3>
+          <p>
+            EmoTik Colorsは追加のカラーテーマを利用できる
+            買い切り機能です。AI解析が無制限になる機能ではありません。
+          </p>
+        </div>
+
+      </div>
+
+
+      <h2>プライバシーポリシー</h2>
+
+      <div class="box">
+
+        <p class="effective-date">
+          <strong>制定日:</strong> 2026年9月4日
+        </p>
+
+        <p>
+          EmoTik（以下「当アプリ」）は、
+          ユーザーのプライバシーを大切にしています。
+          本ポリシーでは、当アプリにおける
+          情報の取り扱いについて説明します。
+        </p>
+
+        <ol>
+
+          <li>
+            <strong>アカウント・個人情報について</strong><br>
+            当アプリは会員登録やログインを必要としません。
+
+            氏名、電話番号、メールアドレスなどの
+            アカウントに紐づく個人情報を、
+            当アプリが意図的に収集することはありません。
+          </li>
+
+          <li>
+            <strong>AI処理について</strong><br>
+            AI解析のために入力されたテキストは、
+            暗号化された通信を通じて当アプリの中継サーバーおよび
+            Google Gemini APIへ送信され、
+            感情の整理、振り返り、リフレーミング等の生成に利用されます。
+
+            Googleは、セキュリティ、不正利用防止、
+            サービス運用等の目的で、
+            一定期間リクエストやレスポンスを保持する場合があります。
+
+            有料のGemini APIサービスを利用する場合、
+            ユーザーの許可なく、
+            入力内容や生成結果がGoogleのAIモデルの
+            学習・改善に使用されることはありません。
+          </li>
+
+          <li>
+            <strong>端末内保存</strong><br>
+            保存した振り返り、解析結果、メモ、設定、履歴などは
+            ユーザーの端末内に保存されます。
+
+            EmoTikがユーザーごとの日記履歴を保管するための
+            外部アカウント型データベースは使用していません。
+          </li>
+
+          <li>
+            <strong>第三者サービスについて</strong><br>
+            当アプリでは、
+            AI処理にGoogle Gemini、
+            アプリ内課金にApple StoreKit、
+            購入関連機能にRevenueCatを利用しています。
+
+            各サービスでは、その機能を提供するために必要な範囲で
+            技術情報や取引関連情報が処理される場合があります。
+          </li>
+
+          <li>
+            <strong>アプリ内課金</strong><br>
+            アプリ内課金はAppleのApp StoreおよびStoreKitを通じて
+            処理されます。
+
+            開発者がクレジットカード番号等の
+            決済情報を取得・保存することはありません。
+          </li>
+
+          <li>
+            <strong>データの保持・削除</strong><br>
+            EmoTik内に端末保存された記録は、
+            アプリ内から削除するか、
+            アプリ自体を端末から削除することで消去できます。
+
+            外部サービスで処理された情報については、
+            各サービスの保持方針に従って取り扱われます。
+          </li>
+
+        </ol>
+
+        <div class="notice">
+          AIによる分析結果は、感情や心理状態を確定するものではありません。
+          自分の気持ちを振り返るための一つの視点としてご利用ください。
+          EmoTikは医療上の診断や治療を目的としたサービスではありません。
+        </div>
+
+      </div>
+
+
+      <h2>利用規約</h2>
+
+      <div class="box">
+
+        <p>
+          当アプリの利用規約は、
+          Apple社の標準エンドユーザーライセンス契約（EULA）に準拠します。
+        </p>
+
+        <p>
+          <a
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Apple標準EULA（利用規約）を見る
+          </a>
+        </p>
+
+      </div>
+
     </div>
 
-    <h2>Terms of Use</h2>
-    <div class="box">
-      <p>EmoTik uses Apple's standard End User License Agreement (EULA). By using EmoTik, you agree to the standard terms available here: <br>
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a></p>
-    </div>
-  </div>
+  </main>
 
-  <hr>
 
-  <!-- Japanese Section -->
-  <div class="lang-section">
-    <h1>EmoTik - サポート & プライバシーポリシー</h1>
+  <footer>
+    <strong>EmoTik</strong><br>
+    Untangle Thoughts.<br><br>
+    © 2026 EmoTik
+  </footer>
 
-    <h2>お問い合わせ・サポート</h2>
-    <div class="box">
-      <p>EmoTikに関するご質問、不具合のご報告、ご意見は下記窓口までお気軽にお問い合わせください。</p>
-      <p><strong>メール窓口:</strong> <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a></p>
-    </div>
 
-    <h2>プライバシーポリシー</h2>
-    <div class="box">
-      <p><strong>制定日:</strong> 2026年9月4日</p>
-      <p>EmoTik（以下「当アプリ」）は、ユーザーのプライバシー保護を最優先事項と考えています。</p>
-      <ol>
-        <li><strong>個人情報の収集について:</strong> 当アプリは会員登録やログインを必要とせず、氏名・電話番号・メールアドレス等の個人を特定する情報を収集しません。</li>
-        <li><strong>AI処理とデータの取り扱い:</strong> 入力された思考テキストは、感情の言語化およびリフレーミングの生成目的でのみ、暗号化通信を介して安全な中継サーバーおよびGoogle Gemini APIへ送信されます。データは処理後に破棄され、恒久的に保存されたりAIの公開学習データとして利用されることはありません。</li>
-        <li><strong>端末内保存:</strong> 解読結果や引き出しの履歴データはすべてユーザーの端末内部（ローカルストレージ）にのみ保存されます。</li>
-        <li><strong>アプリ内課金:</strong> サブスクリプション決済はすべてApple社のStoreKit基盤を通じて行われます。開発者がクレジットカード情報等を保持することはありません。</li>
-      </ol>
-    </div>
+  <!-- =========================
+       Language switching
+  ========================== -->
 
-    <h2>利用規約</h2>
-    <div class="box">
-      <p>当アプリの利用規約は、Apple社の標準エンドユーザーライセンス契約（EULA）に準拠します。<br>
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple標準EULA（利用規約）</a></p>
-    </div>
-  </div>
+  <script>
+    function switchLanguage(language) {
+      const englishSection =
+        document.getElementById("englishSection");
+
+      const japaneseSection =
+        document.getElementById("japaneseSection");
+
+      const englishButton =
+        document.getElementById("englishButton");
+
+      const japaneseButton =
+        document.getElementById("japaneseButton");
+
+
+      if (language === "ja") {
+        englishSection.classList.remove("active");
+        japaneseSection.classList.add("active");
+
+        englishButton.classList.remove("active");
+        japaneseButton.classList.add("active");
+
+        document.documentElement.lang = "ja";
+
+      } else {
+        japaneseSection.classList.remove("active");
+        englishSection.classList.add("active");
+
+        japaneseButton.classList.remove("active");
+        englishButton.classList.add("active");
+
+        document.documentElement.lang = "en";
+      }
+    }
+  </script>
 
 </body>
 </html>
