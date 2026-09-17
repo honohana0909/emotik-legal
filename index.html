@@ -123,85 +123,114 @@ body {
 }
 
 /* =========================
-   Decorative thread
+   EmoTik emotion flower
+   Inspired by the idea of an emotion wheel
 ========================= */
 
-/* =========================
-   EmoTik thread motif
-========================= */
-
-.hero-thread {
+.emotion-flower-wrap {
   position: relative;
-  width: 300px;
-  height: 76px;
-  margin: 24px auto 2px;
+  width: 170px;
+  height: 170px;
+  margin: 24px auto 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 
-.thread-line {
+.emotion-flower-wrap::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  width: 210px;
-  height: 44px;
-  border: 1.2px solid rgba(125, 121, 201, 0.34);
-  border-left-color: transparent;
-  border-right-color: transparent;
+  width: 138px;
+  height: 138px;
   border-radius: 50%;
-  transform-origin: center;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(239, 238, 255, 0.38) 42%,
+      rgba(225, 239, 255, 0.18) 66%,
+      transparent 74%
+    );
+  filter: blur(2px);
 }
 
-.thread-line-1 {
-  top: 5px;
-  transform:
-    translateX(-58%)
-    rotate(-7deg);
+.emotion-flower {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  overflow: visible;
 }
 
-.thread-line-2 {
-  top: 13px;
-  border-color: rgba(109, 155, 202, 0.3);
-  border-left-color: transparent;
-  border-right-color: transparent;
-
-  transform:
-    translateX(-44%)
-    rotate(8deg);
+.emotion-flower .petal {
+  transform-origin: 69px 69px;
 }
 
-.thread-line-3 {
-  top: 27px;
-  width: 250px;
-  height: 26px;
-
-  border-color: rgba(142, 131, 210, 0.26);
-  border-left-color: transparent;
-  border-right-color: transparent;
-
-  transform:
-    translateX(-50%)
-    rotate(-2deg);
+.emotion-flower .petal-shape {
+  fill: rgba(255, 255, 255, 0.62);
+  stroke-width: 1.15;
+  transition: opacity 0.25s ease;
 }
 
-.thread-knot {
-  position: absolute;
-  left: 50%;
-  top: 22px;
-
-  width: 44px;
-  height: 26px;
-
-  border: 1.2px solid rgba(126, 117, 199, 0.42);
-  border-radius: 50%;
-
-  transform:
-    translateX(-50%)
-    rotate(14deg);
-
-  box-shadow:
-    15px 3px 0 -13px rgba(117, 154, 202, 0.45),
-    -15px -2px 0 -13px rgba(142, 127, 207, 0.45);
+.emotion-flower .petal-1 .petal-shape {
+  fill: rgba(146, 132, 219, 0.18);
+  stroke: rgba(126, 111, 204, 0.34);
 }
 
+.emotion-flower .petal-2 .petal-shape {
+  fill: rgba(120, 157, 218, 0.17);
+  stroke: rgba(102, 142, 201, 0.32);
+}
+
+.emotion-flower .petal-3 .petal-shape {
+  fill: rgba(111, 188, 204, 0.16);
+  stroke: rgba(94, 166, 184, 0.30);
+}
+
+.emotion-flower .petal-4 .petal-shape {
+  fill: rgba(143, 193, 171, 0.16);
+  stroke: rgba(116, 169, 148, 0.30);
+}
+
+.emotion-flower .petal-5 .petal-shape {
+  fill: rgba(224, 197, 126, 0.15);
+  stroke: rgba(196, 167, 102, 0.28);
+}
+
+.emotion-flower .petal-6 .petal-shape {
+  fill: rgba(222, 157, 149, 0.15);
+  stroke: rgba(196, 133, 127, 0.28);
+}
+
+.emotion-flower .petal-7 .petal-shape {
+  fill: rgba(206, 143, 177, 0.16);
+  stroke: rgba(179, 122, 154, 0.29);
+}
+
+.emotion-flower .petal-8 .petal-shape {
+  fill: rgba(177, 137, 208, 0.17);
+  stroke: rgba(151, 116, 185, 0.30);
+}
+
+.emotion-flower .inner-ring {
+  fill: rgba(255, 255, 255, 0.72);
+  stroke: rgba(120, 125, 180, 0.16);
+  stroke-width: 1;
+}
+
+.emotion-flower .core {
+  fill: rgba(116, 111, 191, 0.72);
+}
+
+.emotion-flower .core-glow {
+  fill: rgba(255, 255, 255, 0.78);
+}
+
+.emotion-flower {
+  filter:
+    drop-shadow(0 10px 20px rgba(94, 96, 150, 0.08));
+}
+    
 /* =========================
    Language switch
 ========================= */
