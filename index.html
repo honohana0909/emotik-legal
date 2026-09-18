@@ -121,96 +121,7 @@ body {
   font-size: 14px;
   color: #96a0ba;
 }
-/* =========================
-   EmoTik Emotion Flower
-========================= */
 
-.emotion-flower-wrap {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 18px;
-}
-
-.emotion-flower-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(201, 194, 255, 0.30),
-      rgba(198, 224, 255, 0.18) 48%,
-      transparent 72%
-    );
-
-  filter: blur(15px);
-}
-
-.emotion-flower {
-  position: relative;
-  width: 160px;
-  height: 160px;
-
-  filter:
-    drop-shadow(0 12px 24px rgba(93, 88, 165, 0.10));
-}
-
-.emotion-flower .petal {
-  stroke-width: 1.2;
-}
-
-.petal-1 {
-  fill: rgba(131, 115, 211, 0.25);
-  stroke: rgba(112, 96, 191, 0.48);
-}
-
-.petal-2 {
-  fill: rgba(113, 143, 218, 0.23);
-  stroke: rgba(94, 124, 198, 0.44);
-}
-
-.petal-3 {
-  fill: rgba(102, 184, 205, 0.22);
-  stroke: rgba(82, 159, 183, 0.42);
-}
-
-.petal-4 {
-  fill: rgba(135, 190, 167, 0.22);
-  stroke: rgba(107, 165, 140, 0.40);
-}
-
-.petal-5 {
-  fill: rgba(224, 192, 117, 0.21);
-  stroke: rgba(194, 161, 91, 0.39);
-}
-
-.petal-6 {
-  fill: rgba(224, 151, 144, 0.21);
-  stroke: rgba(195, 126, 120, 0.39);
-}
-
-.petal-7 {
-  fill: rgba(205, 136, 174, 0.22);
-  stroke: rgba(179, 111, 151, 0.40);
-}
-
-.petal-8 {
-  fill: rgba(174, 128, 207, 0.23);
-  stroke: rgba(148, 104, 183, 0.42);
-}
-
-.flower-center-ring {
-  fill: rgba(255, 255, 255, 0.68);
-  stroke: rgba(122, 119, 182, 0.20);
-  stroke-width: 1;
-}
-
-.flower-center {
-  fill: rgba(112, 107, 188, 0.72);
-}
     
 /* =========================
    Language switch
@@ -462,55 +373,129 @@ footer strong {
   <div class="container">
 
     <div class="emotion-flower-wrap" aria-hidden="true">
-      <svg
-        class="emotion-flower"
-        viewBox="0 0 160 160"
-        xmlns="http://www.w3.org/2000/svg"
-      >
 
-        <g transform="translate(80 80)">
+  <svg
+    class="emotion-flower"
+    viewBox="0 0 160 160"
+    xmlns="http://www.w3.org/2000/svg"
+  >
 
-          <ellipse class="petal petal-1"
-            cx="0" cy="-42" rx="18" ry="34" />
+    <!-- 外側の輪 -->
+    <circle
+      class="emotion-wheel-orbit"
+      cx="80"
+      cy="80"
+      r="63"
+    />
 
-          <ellipse class="petal petal-2"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(45)" />
+    <g transform="translate(80 80)">
 
-          <ellipse class="petal petal-3"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(90)" />
+      <!-- Joy -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+      />
 
-          <ellipse class="petal petal-4"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(135)" />
+      <!-- Trust -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(45)"
+      />
 
-          <ellipse class="petal petal-5"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(180)" />
+      <!-- Fear -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(90)"
+      />
 
-          <ellipse class="petal petal-6"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(225)" />
+      <!-- Surprise -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(135)"
+      />
 
-          <ellipse class="petal petal-7"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(270)" />
+      <!-- Sadness -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(180)"
+      />
 
-          <ellipse class="petal petal-8"
-            cx="0" cy="-42" rx="18" ry="34"
-            transform="rotate(315)" />
+      <!-- Disgust -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(225)"
+      />
 
-          <circle class="flower-center-ring"
-            cx="0" cy="0" r="27" />
+      <!-- Anger -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(270)"
+      />
 
-          <circle class="flower-center"
-            cx="0" cy="0" r="10" />
+      <!-- Anticipation -->
+      <ellipse
+        class="petal"
+        cx="0"
+        cy="-39"
+        rx="16"
+        ry="31"
+        transform="rotate(315)"
+      />
 
-        </g>
-      </svg>
-    </div>
+      <!-- 感情の中心 -->
+      <circle
+        class="flower-center-halo"
+        cx="0"
+        cy="0"
+        r="30"
+      />
 
+      <circle
+        class="flower-center-ring"
+        cx="0"
+        cy="0"
+        r="22"
+      />
+
+      <circle
+        class="flower-center"
+        cx="0"
+        cy="0"
+        r="4"
+      />
+
+    </g>
+
+  </svg>
+
+</div>
     <h1 class="brand">EmoTik</h1>
 
     <p class="tagline">
