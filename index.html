@@ -121,7 +121,78 @@ body {
   font-size: 14px;
   color: #96a0ba;
 }
+/* =========================
+   EmoTik Emotion Wheel
+   Minimal line-art version
+========================= */
 
+.emotion-flower-wrap {
+  position: relative;
+  width: 154px;
+  height: 154px;
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.emotion-flower {
+  width: 150px;
+  height: 150px;
+  overflow: visible;
+
+  filter:
+    drop-shadow(
+      0 8px 16px
+      rgba(79, 85, 130, 0.035)
+    );
+}
+
+/* 外側のごく薄い輪 */
+.emotion-wheel-orbit {
+  fill: none;
+  stroke: rgba(110, 119, 165, 0.14);
+  stroke-width: 0.9;
+}
+
+/* 8方向の感情の花びら */
+.emotion-flower .petal {
+  fill: none;
+  stroke: rgba(105, 111, 170, 0.42);
+  stroke-width: 1.15;
+  vector-effect: non-scaling-stroke;
+}
+
+/* 少しだけ線色に揺らぎをつける */
+.emotion-flower .petal:nth-of-type(2n) {
+  stroke: rgba(108, 137, 176, 0.36);
+}
+
+.emotion-flower .petal:nth-of-type(3n) {
+  stroke: rgba(137, 116, 177, 0.34);
+}
+
+/* 中央の輪 */
+.flower-center-halo {
+  fill: none;
+  stroke: rgba(112, 111, 173, 0.12);
+  stroke-width: 1;
+}
+
+.flower-center-ring {
+  fill: none;
+  stroke: rgba(108, 113, 168, 0.28);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Tikの核 */
+.flower-center {
+  fill: rgba(103, 101, 163, 0.62);
+}
     
 /* =========================
    Language switch
