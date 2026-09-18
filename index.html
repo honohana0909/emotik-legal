@@ -126,10 +126,14 @@ body {
    Minimal line-art version
 ========================= */
 
+/* =========================
+   EmoTik Symbol
+   Minimal line-art version
+========================= */
+
 .emotion-flower-wrap {
-  position: relative;
-  width: 154px;
-  height: 154px;
+  width: 170px;
+  height: 170px;
   margin: 0 auto 22px;
 
   display: flex;
@@ -140,58 +144,65 @@ body {
 }
 
 .emotion-flower {
-  width: 150px;
-  height: 150px;
+  width: 168px;
+  height: 168px;
   overflow: visible;
+}
 
+
+/* 8枚の尖った花びら */
+
+.emotion-petal {
+  fill: none;
+
+  stroke: rgba(103, 108, 160, 0.46);
+  stroke-width: 1.55;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  vector-effect: non-scaling-stroke;
+}
+
+
+/* プルチックの感情の輪を示す円 */
+
+.emotion-ring {
+  fill: none;
+
+  stroke: rgba(112, 119, 164, 0.22);
+  stroke-width: 1;
+
+  stroke-dasharray: 3.5 4.5;
+  stroke-linecap: round;
+
+  vector-effect: non-scaling-stroke;
+}
+
+.emotion-ring-middle {
+  stroke-opacity: 0.82;
+}
+
+.emotion-ring-inner {
+  stroke-opacity: 0.7;
+}
+
+
+/* 中央の小さな核 */
+
+.emotion-center {
+  fill: rgba(101, 104, 160, 0.52);
+}
+
+
+/* ごく弱い立体感だけ */
+
+.emotion-flower {
   filter:
     drop-shadow(
-      0 8px 16px
-      rgba(79, 85, 130, 0.035)
+      0 7px 15px
+      rgba(74, 79, 125, 0.035)
     );
-}
-
-/* 外側のごく薄い輪 */
-.emotion-wheel-orbit {
-  fill: none;
-  stroke: rgba(110, 119, 165, 0.14);
-  stroke-width: 0.9;
-}
-
-/* 8方向の感情の花びら */
-.emotion-flower .petal {
-  fill: none;
-  stroke: rgba(105, 111, 170, 0.42);
-  stroke-width: 1.15;
-  vector-effect: non-scaling-stroke;
-}
-
-/* 少しだけ線色に揺らぎをつける */
-.emotion-flower .petal:nth-of-type(2n) {
-  stroke: rgba(108, 137, 176, 0.36);
-}
-
-.emotion-flower .petal:nth-of-type(3n) {
-  stroke: rgba(137, 116, 177, 0.34);
-}
-
-/* 中央の輪 */
-.flower-center-halo {
-  fill: none;
-  stroke: rgba(112, 111, 173, 0.12);
-  stroke-width: 1;
-}
-
-.flower-center-ring {
-  fill: none;
-  stroke: rgba(108, 113, 168, 0.28);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-
-/* Tikの核 */
-.flower-center {
-  fill: rgba(103, 101, 163, 0.62);
 }
     
 /* =========================
@@ -443,126 +454,135 @@ footer strong {
   <header class="hero">
   <div class="container">
 
-    <div class="emotion-flower-wrap" aria-hidden="true">
+   <div class="emotion-flower-wrap" aria-hidden="true">
 
   <svg
     class="emotion-flower"
-    viewBox="0 0 160 160"
+    viewBox="0 0 200 200"
     xmlns="http://www.w3.org/2000/svg"
   >
 
-    <!-- 外側の輪 -->
+    <!-- プルチックの輪を想起させる3つの円 -->
     <circle
-      class="emotion-wheel-orbit"
-      cx="80"
-      cy="80"
-      r="63"
+      class="emotion-ring emotion-ring-outer"
+      cx="100"
+      cy="100"
+      r="88"
     />
 
-    <g transform="translate(80 80)">
+    <circle
+      class="emotion-ring emotion-ring-middle"
+      cx="100"
+      cy="100"
+      r="64"
+    />
 
-      <!-- Joy -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
+    <circle
+      class="emotion-ring emotion-ring-inner"
+      cx="100"
+      cy="100"
+      r="39"
+    />
+
+    <!-- EmoTik icon flower -->
+    <g class="emotion-petals">
+
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
       />
 
-      <!-- Trust -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(45)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(45 100 100)"
       />
 
-      <!-- Fear -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(90)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(90 100 100)"
       />
 
-      <!-- Surprise -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(135)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(135 100 100)"
       />
 
-      <!-- Sadness -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(180)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(180 100 100)"
       />
 
-      <!-- Disgust -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(225)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(225 100 100)"
       />
 
-      <!-- Anger -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(270)"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(270 100 100)"
       />
 
-      <!-- Anticipation -->
-      <ellipse
-        class="petal"
-        cx="0"
-        cy="-39"
-        rx="16"
-        ry="31"
-        transform="rotate(315)"
-      />
-
-      <!-- 感情の中心 -->
-      <circle
-        class="flower-center-halo"
-        cx="0"
-        cy="0"
-        r="30"
-      />
-
-      <circle
-        class="flower-center-ring"
-        cx="0"
-        cy="0"
-        r="22"
-      />
-
-      <circle
-        class="flower-center"
-        cx="0"
-        cy="0"
-        r="4"
+      <path
+        class="emotion-petal"
+        d="
+          M 100 100
+          C 76 70, 76 38, 100 18
+          C 124 38, 124 70, 100 100
+          Z
+        "
+        transform="rotate(315 100 100)"
       />
 
     </g>
+
+    <!-- 中央。文字で隠さず、8方向の線がそのまま交わる -->
+    <circle
+      class="emotion-center"
+      cx="100"
+      cy="100"
+      r="3"
+    />
 
   </svg>
 
