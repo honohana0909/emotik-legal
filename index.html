@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>EmoTik - Support & Legal</title>
+  <title>EmoTik - Support, Privacy &amp; Terms</title>
+  <meta name="description" content="EmoTik support, privacy policy, and information about Tik and Colors purchases. 日本語・English対応。">
 
   <style>
     * {
@@ -442,6 +443,21 @@ footer strong {
     border-radius: 18px;
   }
 }
+
+/* Legal-page readability and keyboard access */
+[hidden] { display: none !important; }
+.box, .section-nav { overflow-wrap: anywhere; }
+.section-nav { text-align: center; line-height: 2.2; font-size: 14px; }
+.legal-list { margin-top: 26px; }
+.legal-list li { margin-bottom: 24px; }
+.legal-list li:last-child { margin-bottom: 0; }
+.legal-list p { margin-bottom: 0; }
+.faq-item p { color: #596783; }
+.effective-date, .hero-description { color: #65728d; }
+h2[id] { scroll-margin-top: 24px; }
+.box a:not(.email-button) { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #6765b6; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
   </style>
 </head>
 
@@ -599,7 +615,7 @@ footer strong {
 
     <div class="language-switch">
       <button
-        id="englishButton"
+        id="englishButton" type="button" aria-controls="englishSection" aria-pressed="true"
         class="active"
         onclick="switchLanguage('en')"
       >
@@ -607,7 +623,7 @@ footer strong {
       </button>
 
       <button
-        id="japaneseButton"
+        id="japaneseButton" type="button" aria-controls="japaneseSection" aria-pressed="false"
         onclick="switchLanguage('ja')"
       >
         日本語
@@ -617,406 +633,66 @@ footer strong {
   </div>
 </header>
 
-  <main class="container">
-
-    <!-- ==================================================
-         ENGLISH
-    =================================================== -->
-
-    <div id="englishSection" class="lang-section active">
-
-      <h2>Support & Contact</h2>
-
-      <div class="box support-card">
-        <h3>Need help with EmoTik?</h3>
-
-        <p>
-          If you have questions, feedback, or experience an issue,
-          please contact us by email.
-        </p>
-
-        <a
-          class="email-button"
-          href="mailto:emotikhelpdesk@outlook.jp"
-        >
-          emotikhelpdesk@outlook.jp
-        </a>
-
-        <p style="margin-top: 16px; font-size: 13px; color: #94a3b8;">
-          We typically respond within 2–3 business days.
-        </p>
-      </div>
-
-
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="box">
-
-        <div class="faq-item">
-          <h3>What is EmoTik?</h3>
-          <p>
-            EmoTik is an AI-assisted reflection app designed to help you
-            organize thoughts and put difficult-to-express feelings into words.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Is EmoTik a medical or mental health treatment service?</h3>
-          <p>
-            No. EmoTik is intended for personal reflection and self-understanding.
-            It does not provide medical diagnosis, treatment, or professional
-            mental health advice.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Where are my saved reflections stored?</h3>
-          <p>
-            Reflections and history saved in EmoTik are stored locally
-            on your device.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Does EmoTik send text to an AI service?</h3>
-          <p>
-            Yes. Text submitted for AI analysis is sent through an encrypted
-            connection via our proxy server to the Google Gemini API
-            so that EmoTik can generate reflection and reframing suggestions.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How do in-app purchases work?</h3>
-          <p>
-            Purchases are processed by Apple through the App Store and StoreKit.
-            EmoTik does not receive or store your payment card information.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What is EmoTik Colors?</h3>
-          <p>
-            EmoTik Colors is a one-time purchase that unlocks additional
-            visual themes. It does not provide unlimited AI analysis.
-          </p>
-        </div>
-
-      </div>
-
-
-      <h2>Privacy Policy</h2>
-
-      <div class="box">
-
-        <p class="effective-date">
-          <strong>Effective Date:</strong> September 4, 2026
-        </p>
-
-        <p>
-          EmoTik is committed to protecting your privacy.
-          This policy explains how information is handled when you use the app.
-        </p>
-
-        <ol>
-
-          <li>
-            <strong>Account and Personal Information</strong><br>
-            EmoTik does not require account registration or login.
-            We do not intentionally collect your name, phone number,
-            email address, or other account-based personally identifiable information.
-          </li>
-
-          <li>
-            <strong>AI Processing</strong><br>
-            Text you submit for AI analysis is transmitted over encrypted
-            connections through our proxy server to the Google Gemini API
-            for the purpose of generating emotional reflection,
-            organization, and reframing suggestions.
-
-            Google may retain limited request and response data for security,
-            abuse prevention, or service operation in accordance with its
-            applicable terms.
-
-            When paid Gemini API services are used, prompts and responses
-            are not used by Google to train or improve its AI models
-            without permission.
-          </li>
-
-          <li>
-            <strong>Local Storage</strong><br>
-            Saved reflections, analysis results, notes, preferences,
-            and history are stored locally on your device.
-
-            EmoTik does not maintain a remote account-based database
-            of your journal history.
-          </li>
-
-          <li>
-            <strong>Third-Party Services</strong><br>
-            EmoTik uses Google Gemini for AI processing,
-            Apple StoreKit for in-app purchases,
-            and RevenueCat for purchase-related functionality.
-
-            These services may process limited technical or
-            transaction-related information as necessary
-            to provide their respective services.
-          </li>
-
-          <li>
-            <strong>In-App Purchases</strong><br>
-            Purchases are processed through Apple's App Store and StoreKit.
-            EmoTik does not receive or store your credit card
-            or payment card information.
-          </li>
-
-          <li>
-            <strong>Data Retention and Deletion</strong><br>
-            Locally stored EmoTik records can be removed by deleting them
-            within the app or by deleting the app from your device.
-
-            Data processed by third-party services is handled according
-            to the retention policies of those services.
-          </li>
-
-        </ol>
-
-        <div class="notice">
-          AI-generated results are intended to provide perspectives for
-          personal reflection. They do not constitute medical,
-          psychological, or other professional diagnosis or treatment.
-        </div>
-
-      </div>
-
-
-      <h2>Terms of Use</h2>
-
-      <div class="box">
-
-        <p>
-          EmoTik uses Apple's Standard End User License Agreement (EULA).
-          By using EmoTik, you agree to the applicable terms.
-        </p>
-
-        <p>
-          <a
-            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Apple's Standard EULA
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- ==================================================
-         JAPANESE
-    =================================================== -->
-
-    <div id="japaneseSection" class="lang-section">
-
-      <h2>お問い合わせ・サポート</h2>
-
-      <div class="box support-card">
-
-        <h3>EmoTikについてお困りですか？</h3>
-
-        <p>
-          ご質問、不具合のご報告、ご意見などがございましたら、
-          下記メールアドレスまでお問い合わせください。
-        </p>
-
-        <a
-          class="email-button"
-          href="mailto:emotikhelpdesk@outlook.jp"
-        >
-          emotikhelpdesk@outlook.jp
-        </a>
-
-      </div>
-
-
-      <h2>よくある質問</h2>
-
-      <div class="box">
-
-        <div class="faq-item">
-          <h3>EmoTikとは何ですか？</h3>
-          <p>
-            EmoTikは、頭の中で絡まった思考や
-            言葉にしにくい感情をAIと一緒に整理するための
-            リフレクションアプリです。
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>医療・心理療法のためのアプリですか？</h3>
-          <p>
-            いいえ。EmoTikは自分の気持ちを振り返り、
-            自己理解のきっかけをつくることを目的としています。
-            医療上の診断、治療、専門的な心理相談を提供するものではありません。
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>保存した記録はどこに保存されますか？</h3>
-          <p>
-            EmoTikで保存した振り返りや履歴は、
-            ユーザーの端末内に保存されます。
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>入力した文章はAIサービスへ送信されますか？</h3>
-          <p>
-            はい。AI解析を行う際には、入力されたテキストが
-            暗号化された通信を通じて当アプリの中継サーバーおよび
-            Google Gemini APIへ送信されます。
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>アプリ内課金はどのように処理されますか？</h3>
-          <p>
-            アプリ内課金はAppleのApp StoreおよびStoreKitを通じて
-            処理されます。開発者がクレジットカード番号等の
-            決済情報を取得・保存することはありません。
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>EmoTik Colorsとは何ですか？</h3>
-          <p>
-            EmoTik Colorsは追加のカラーテーマを利用できる
-            買い切り機能です。AI解析が無制限になる機能ではありません。
-          </p>
-        </div>
-
-      </div>
-
-
-      <h2>プライバシーポリシー</h2>
-
-      <div class="box">
-
-        <p class="effective-date">
-          <strong>制定日:</strong> 2026年9月4日
-        </p>
-
-        <p>
-          EmoTik（以下「当アプリ」）は、
-          ユーザーのプライバシーを大切にしています。
-          本ポリシーでは、当アプリにおける
-          情報の取り扱いについて説明します。
-        </p>
-
-        <ol>
-
-          <li>
-            <strong>アカウント・個人情報について</strong><br>
-            当アプリは会員登録やログインを必要としません。
-
-            氏名、電話番号、メールアドレスなどの
-            アカウントに紐づく個人情報を、
-            当アプリが意図的に収集することはありません。
-          </li>
-
-          <li>
-            <strong>AI処理について</strong><br>
-            AI解析のために入力されたテキストは、
-            暗号化された通信を通じて当アプリの中継サーバーおよび
-            Google Gemini APIへ送信され、
-            感情の整理、振り返り、リフレーミング等の生成に利用されます。
-
-            Googleは、セキュリティ、不正利用防止、
-            サービス運用等の目的で、
-            一定期間リクエストやレスポンスを保持する場合があります。
-
-            有料のGemini APIサービスを利用する場合、
-            ユーザーの許可なく、
-            入力内容や生成結果がGoogleのAIモデルの
-            学習・改善に使用されることはありません。
-          </li>
-
-          <li>
-            <strong>端末内保存</strong><br>
-            保存した振り返り、解析結果、メモ、設定、履歴などは
-            ユーザーの端末内に保存されます。
-
-            EmoTikがユーザーごとの日記履歴を保管するための
-            外部アカウント型データベースは使用していません。
-          </li>
-
-          <li>
-            <strong>第三者サービスについて</strong><br>
-            当アプリでは、
-            AI処理にGoogle Gemini、
-            アプリ内課金にApple StoreKit、
-            購入関連機能にRevenueCatを利用しています。
-
-            各サービスでは、その機能を提供するために必要な範囲で
-            技術情報や取引関連情報が処理される場合があります。
-          </li>
-
-          <li>
-            <strong>アプリ内課金</strong><br>
-            アプリ内課金はAppleのApp StoreおよびStoreKitを通じて
-            処理されます。
-
-            開発者がクレジットカード番号等の
-            決済情報を取得・保存することはありません。
-          </li>
-
-          <li>
-            <strong>データの保持・削除</strong><br>
-            EmoTik内に端末保存された記録は、
-            アプリ内から削除するか、
-            アプリ自体を端末から削除することで消去できます。
-
-            外部サービスで処理された情報については、
-            各サービスの保持方針に従って取り扱われます。
-          </li>
-
-        </ol>
-
-        <div class="notice">
-          AIによる分析結果は、感情や心理状態を確定するものではありません。
-          自分の気持ちを振り返るための一つの視点としてご利用ください。
-          EmoTikは医療上の診断や治療を目的としたサービスではありません。
-        </div>
-
-      </div>
-
-
-      <h2>利用規約</h2>
-
-      <div class="box">
-
-        <p>
-          当アプリの利用規約は、
-          Apple社の標準エンドユーザーライセンス契約（EULA）に準拠します。
-        </p>
-
-        <p>
-          <a
-            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Apple標準EULA（利用規約）を見る
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-  </main>
+<main class="container">
+<section id="englishSection" class="lang-section active" lang="en">
+      <nav class="section-nav" aria-label="Page sections"><a href="#support-en">Support & Contact</a> / <a href="#faq-en">Frequently Asked Questions</a> / <a href="#privacy-en">Privacy Policy</a> / <a href="#terms-en">Terms & Service Information</a></nav>
+      <h2 id="support-en">Support & Contact</h2>
+      <div class="box support-card"><p>For questions, issue reports, purchase help, or privacy requests, please contact us by email.</p><a class="email-button" href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a></div>
+      <h2 id="faq-en">Frequently Asked Questions</h2>
+      <div class="box"><div class="faq-item"><h3>What is EmoTik?</h3><p>EmoTik helps you organize thoughts and explore feelings through AI-assisted reflection. It is a tool for personal reflection and self-understanding, not medical diagnosis, treatment, or professional mental health advice.</p></div><div class="faq-item"><h3>Where are my saved reflections stored?</h3><p>Saved reflections and history are stored on your device. Text submitted for analysis is sent to our intermediary service and Google Gemini. Separately, your Tik balance, free-use date, and purchase records are managed on our server.</p></div><div class="faq-item"><h3>How do the daily free reflection and Tik work?</h3><p>One regular reflection is available free each day, with the day determined using Japan Standard Time (JST). After the daily free reflection is used, a regular reflection requires 1 Tik. Tik is available in packs of 5 Tik, 15 Tik, and 30 Tik. Check the App Store purchase screen for the price in your region.</p></div><div class="faq-item"><h3>When is Tik used?</h3><p>Before a paid reflection, the app shows your current balance and the balance after using 1 Tik. Tik is deducted after a successful analysis. If the AI request or analysis fails, no Tik is deducted for that failed analysis. Deep Dive for a reflection does not require additional Tik.</p></div><div class="faq-item"><h3>My purchase has not appeared in my Tik balance. What should I do?</h3><p>Purchase information can take a short time to reach our server. The app checks your balance again after purchase. If it is still incorrect, reopen the purchase screen or restart the app. Contact <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a> if the issue continues; do not purchase again just to correct a missing balance.</p></div><div class="faq-item"><h3>What is EmoTik Colors, and can I restore it?</h3><p>EmoTik Colors is a one-time, non-consumable purchase that unlocks additional themes. It does not include Tik or unlimited AI analysis. Use Restore Purchases with the Apple Account used for the original Colors purchase.</p></div><div class="faq-item"><h3>Can I restore Tik or transfer my saved records?</h3><p>Tik packs are consumable purchases. Restore Purchases is for eligible non-consumable purchases such as Colors; it does not re-grant previously purchased or used Tik. Your remaining Tik balance is managed using your EmoTik user ID. This does not provide an account-based transfer of your journal or guarantee Tik transfer to a different device. Contact <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a> about a missing balance.</p></div><div class="faq-item"><h3>How can I delete my information?</h3><p>Use the app’s record deletion controls to remove saved reflections from your device. Deleting those records or uninstalling the app does not automatically delete the persistent user ID or server-side usage and purchase information. See the retention and deletion section below for requests concerning that information.</p></div></div>
+      <h2 id="privacy-en">Privacy Policy</h2>
+      <div class="box"><p class="effective-date">First issued: September 4, 2026 · Last updated: September 19, 2026</p><p>This policy explains the information EmoTik handles, why it is used, where it is stored, and how deletion works.</p><div class="notice">Saved journal records stay on your device; AI analysis sends text to external services. Tik, daily free use, and purchases are managed on our server using a user ID.</div><ol class="legal-list">
+<li><h3>Information stored on your device</h3><p>Saved thoughts, analysis results, emotion and situation tags, notes, history, preferences, and optional profile settings (nickname and date of birth) are stored on your device. The app does not require account registration or an email address to begin using it. A nickname and date of birth are not automatically included in analysis requests by the current app; information you include in your submitted text is transmitted as part of that text.</p></li>
+<li><h3>Persistent EmoTik user ID</h3><p>The app generates a random user ID and stores it in secure storage (iOS Keychain). It is not your name, but it is a persistent identifier used to recognize the same app user. It may remain after you uninstall the app. The same ID is used with our server and RevenueCat to manage daily free use, Tik balances, purchases, and access to Colors. Not requiring a login does not mean that we collect no identifiers.</p></li>
+<li><h3>Usage and purchase information on our server</h3><p>We use Cloudflare Workers as an intermediary service and Cloudflare D1 to store usage and purchase management information. This includes the user ID, daily free-use date, Tik balance, and purchase transaction identifiers and related purchase information. These records support correct balances, daily limits, purchase processing, and prevention of duplicate purchase grants. This database is separate from the journal history saved on your device.</p></li>
+<li><h3>AI processing and external transmission</h3><p>When you request a reflection, the submitted text and instructions needed for that reflection are sent over HTTPS through Cloudflare Workers to the paid Google Gemini API. For Deep Dive, the original text and relevant earlier analysis are also sent. The purpose is to generate responses to your text. Do not include information about yourself or others that is unnecessary for your reflection.</p></li>
+<li><h3>Google’s handling of AI content</h3><p>For the paid Gemini API used by EmoTik, Google states that prompts and responses are not used to improve Google products. Google nevertheless retains limited logs for detecting and preventing policy violations and for required legal or regulatory disclosures. This is not a promise of zero retention. The applicable conditions are described in <a href="https://ai.google.dev/gemini-api/terms#paid-services" target="_blank" rel="noopener noreferrer">Gemini API — Paid Services</a>.</p></li>
+<li><h3>Purchases and service providers</h3><p>Apple processes payments through the App Store and StoreKit. EmoTik does not receive your payment card number or security code. RevenueCat processes the EmoTik user ID, purchase history, and entitlement information for purchase verification, restoration of eligible purchases, fraud prevention, and purchase-related reporting. Network and service providers may process technical information such as IP addresses and request metadata to deliver and secure their services. Provider information: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>; <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>; <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.</p></li>
+<li><h3>Support communications</h3><p>If you email <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>, we receive your email address, message, and any information you choose to attach. We use that information to respond and investigate the issue. Please do not send payment card details or unnecessary journal content. For purchase or deletion requests, we may need information sufficient to locate the relevant records and verify the request.</p></li>
+<li><h3>Advertising and tracking</h3><p>EmoTik does not use journal content, user IDs, or purchase records for third-party advertising, cross-app advertising tracking, or sale to data brokers. Purchase reporting through RevenueCat is distinct from advertising tracking.</p></li>
+<li><h3>Retention and deletion</h3><p>You can delete individual saved records or all drawer records using the app. These actions apply to local records; they do not delete your Keychain ID, D1 usage and purchase records, or data held by service providers. Uninstalling the app does not automatically remove those records either. For access or deletion requests concerning server-side information, contact <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>. We will review the request and explain what can be deleted and what must be retained for purchase administration, fraud prevention, or legal obligations. Providers apply their own applicable retention rules. We do not promise that all copies are deleted immediately when local records are removed.</p></li>
+<li><h3>Processing locations and policy updates</h3><p>Service providers may process information outside your country according to their terms and applicable safeguards. We update this policy when our data handling changes and indicate the revision date on this page. Contact the support address above with privacy questions.</p></li>
+</ol></div>
+      <h2 id="terms-en">Terms & Service Information</h2>
+      <div class="box"><ol class="legal-list">
+<li><h3>License agreement</h3><p>EmoTik uses <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple’s Standard EULA</a>. The following service information explains the app’s features and purchases; it does not replace Apple’s Standard EULA or limit rights available under applicable law.</p></li>
+<li><h3>AI reflection</h3><p>AI-generated results may be inaccurate or unsuitable for your situation. They offer perspectives for personal reflection and are not medical, psychological, or other professional diagnosis or treatment. If you need urgent assistance, contact local emergency services or an appropriate professional.</p></li>
+<li><h3>Free use and Tik</h3><p>One regular reflection is available free per day using Japan Standard Time. After that, a successful regular reflection uses 1 Tik. The app requests confirmation before a Tik-funded reflection. One reflection and its Deep Dive are covered by 1 Tik; Deep Dive does not require an additional Tik. An internet connection is required, and availability may be affected by network or service problems.</p></li>
+<li><h3>Purchase types and prices</h3><p>Tik is sold as consumable packs of 5 Tik, 15 Tik, and 30 Tik. Colors is a separate, one-time non-consumable theme purchase, not a subscription or an unlimited-analysis plan. Prices and applicable taxes are shown in the App Store purchase confirmation for your region. Apple processes the payment.</p></li>
+<li><h3>Restoration and purchase support</h3><p>Previously purchased Colors can be restored using the same Apple Account. Consumable Tik is managed as a server-side balance and is not re-granted by Restore Purchases. Purchase synchronization can take time. For a missing balance or entitlement, contact <a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>. Refund requests for App Store purchases are handled through Apple’s refund process: <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener noreferrer">Request help from Apple</a>. Eligibility is determined by Apple and applicable law.</p></li>
+<li><h3>Your saved records</h3><p>Saved journal history is stored on your device. Do not rely on an app reinstall or purchase restoration to recover that history. Purchase restoration and journal recovery are separate processes.</p></li>
+</ol></div>
+    </section>
+<section id="japaneseSection" class="lang-section" lang="ja" hidden>
+      <nav class="section-nav" aria-label="ページ内メニュー"><a href="#support-ja">お問い合わせ・サポート</a> / <a href="#faq-ja">よくある質問</a> / <a href="#privacy-ja">プライバシーポリシー</a> / <a href="#terms-ja">利用規約・サービスの説明</a></nav>
+      <h2 id="support-ja">お問い合わせ・サポート</h2>
+      <div class="box support-card"><p>ご質問、不具合のご報告、購入やプライバシーに関するご相談は、下記メールアドレスへご連絡ください。</p><a class="email-button" href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a></div>
+      <h2 id="faq-ja">よくある質問</h2>
+      <div class="box"><div class="faq-item"><h3>EmoTikとは何ですか？</h3><p>EmoTikは、AIとの振り返りを通じて思考や感情を整理し、自己理解のきっかけをつくるアプリです。医療上の診断、治療、専門的な心理相談を提供するものではありません。</p></div><div class="faq-item"><h3>保存した記録はどこに保存されますか？</h3><p>保存した振り返りや履歴は端末内に保存されます。解析のために送信した文章は、中継サービスとGoogle Geminiで処理されます。これとは別に、Tik残高・無料利用日・購入取引はサーバーで管理します。</p></div><div class="faq-item"><h3>毎日の無料解析とTikはどう違いますか？</h3><p>通常解析は1日1回無料です。日付の切り替えは日本時間（JST）を基準とします。無料枠を利用した後の通常解析には1 Tikを使用します。Tikは5 Tik・15 Tik・30 Tikの単位で購入できます。価格はお住まいの地域のApp Store購入画面でご確認ください。</p></div><div class="faq-item"><h3>Tikはいつ消費されますか？</h3><p>Tikを使う解析では、開始前に現在の残高と1 Tik使用後の残高を表示します。Tikの減算は解析成功後に行います。AIへのリクエストや解析に失敗した場合、その失敗した解析のためにTikを減算することはありません。解析に対するDeep Diveでは追加のTikを消費しません。</p></div><div class="faq-item"><h3>購入したTikが残高に反映されません。</h3><p>購入情報がサーバーに届くまで、少し時間がかかる場合があります。アプリは購入後に残高を再取得します。反映されない場合は購入画面を開き直すか、アプリを再起動してください。解消しない場合は<a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>へご連絡ください。残高を直すために同じ商品を重ねて購入する必要はありません。</p></div><div class="faq-item"><h3>EmoTik Colorsとは何ですか？ 復元できますか？</h3><p>EmoTik Colorsは追加のカラーテーマを解放する買い切りの非消耗型購入です。Tikや無制限のAI解析は含まれません。購入時と同じApple Accountを使い、アプリの「購入を復元」から復元できます。</p></div><div class="faq-item"><h3>Tikや保存した記録は復元・引き継ぎできますか？</h3><p>Tikは消耗型購入です。「購入を復元」はColorsなどの対象となる非消耗型購入のための機能であり、購入済み・使用済みのTikを再付与するものではありません。残りのTikはEmoTikのユーザーIDを使ってサーバーで管理します。この仕組みは日記のアカウント同期や、別の端末へのTik引き継ぎを保証するものではありません。残高に問題がある場合は<a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>へご連絡ください。</p></div><div class="faq-item"><h3>データはどのように削除できますか？</h3><p>保存した振り返りはアプリ内の記録削除機能で消去できます。記録の削除やアプリのアンインストールだけでは、保持されたユーザーIDやサーバー上の利用・購入情報は自動削除されません。それらの情報に関するご相談は、下記の「保存期間と削除」をご覧ください。</p></div></div>
+      <h2 id="privacy-ja">プライバシーポリシー</h2>
+      <div class="box"><p class="effective-date">制定日：2026年9月4日 ／ 最終更新日：2026年9月19日</p><p>EmoTikで取り扱う情報、その利用目的、保存先、削除について説明します。</p><div class="notice">記録は端末内に保存し、AI解析時には文章を外部送信します。Tik・無料利用枠・購入はユーザーIDを使ってサーバーで管理します。</div><ol class="legal-list">
+<li><h3>端末内に保存する情報</h3><p>保存した思考記録、解析結果、感情・シチュエーションタグ、メモ、履歴、設定、任意のプロフィール設定（ニックネーム・生年月日）は端末内に保存します。利用開始のための会員登録やメールアドレスの入力は不要です。現在のアプリは、ニックネームや生年月日を解析リクエストへ自動で追加しません。ただし、送信する文章にご自身で記載した情報は、その文章の一部として送信されます。</p></li>
+<li><h3>継続して利用するEmoTikユーザーID</h3><p>アプリはランダムなユーザーIDを生成し、安全な保存領域（iOSのKeychain）に保持します。氏名ではありませんが、同じアプリ利用者を識別するための継続的な識別子です。アプリをアンインストールしても残る場合があります。このIDを当アプリのサーバーとRevenueCatで共通して使用し、無料利用枠、Tik残高、購入、Colorsの利用権限を管理します。ログイン不要であっても、識別子を取得しないという意味ではありません。</p></li>
+<li><h3>サーバーで管理する利用・購入情報</h3><p>中継サービスとしてCloudflare Workers、利用・購入管理用データベースとしてCloudflare D1を使用します。ユーザーID、無料枠を使用した日付、Tik残高、購入取引IDと関連する購入情報などを保存します。正しい残高の維持、1日ごとの無料枠の管理、購入の反映、同じ購入に対する二重付与の防止に利用します。この管理用データベースは、端末に保存する日記の履歴とは別のものです。</p></li>
+<li><h3>AI解析と外部送信</h3><p>解析を実行すると、送信した文章と解析に必要な指示文がHTTPS通信でCloudflare Workersを経由し、有料のGoogle Gemini APIへ送信されます。Deep Diveでは、元の文章と関連する前回の解析内容も送信します。これらは文章に応じた振り返りや提案の生成に使用します。振り返りに不要なご本人・第三者の個人情報は入力しないでください。</p></li>
+<li><h3>GoogleによるAI入力・出力の取扱い</h3><p>EmoTikが利用する有料Gemini APIについて、Googleは入力内容や生成結果をGoogle製品の改善に使用しないと定めています。一方で、ポリシー違反の検出・防止や、法令に基づく開示などのために、一定期間ログを保持します。データが一切保存されないことを意味するものではありません。適用条件は<a href="https://ai.google.dev/gemini-api/terms#paid-services" target="_blank" rel="noopener noreferrer">Gemini API — Paid Services</a>をご確認ください。</p></li>
+<li><h3>購入処理と外部サービス</h3><p>決済はAppleのApp StoreおよびStoreKitが処理します。EmoTikがクレジットカード番号やセキュリティコードを取得することはありません。RevenueCatは、購入確認、対象商品の復元、不正防止、購入状況の集計・分析のために、EmoTikユーザーID、購入履歴、利用権限情報を処理します。通信・サービス提供事業者は、サービスの提供や安全性の確保のため、IPアドレスやリクエストの付随情報などの技術情報を処理する場合があります。各事業者の説明：<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>／<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>／<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>。</p></li>
+<li><h3>お問い合わせ情報</h3><p><a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>へご連絡いただいた場合、メールアドレス、本文、ご自身で添付した情報を受け取り、回答や問題の調査に利用します。カード情報や不要な日記の内容は送らないでください。購入や削除のご相談では、対象記録の特定やご本人からの依頼であることの確認に必要な情報をお願いする場合があります。</p></li>
+<li><h3>広告・トラッキング</h3><p>EmoTikは、日記の内容、ユーザーID、購入記録を、第三者広告、アプリを横断する広告目的のトラッキング、データブローカーへの販売に利用しません。RevenueCatによる購入状況の集計・分析は、広告目的のトラッキングとは別のものです。</p></li>
+<li><h3>保存期間と削除</h3><p>アプリ内では、保存した記録の個別削除や引き出しの全記録削除ができます。これらは端末内の記録を対象とし、KeychainのユーザーID、D1の利用・購入情報、外部サービス側のデータを削除するものではありません。アプリのアンインストールでも、これらは自動削除されません。サーバー上の情報の確認・削除をご希望の場合は<a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>へご相談ください。依頼内容を確認し、対応できる範囲と、購入管理・不正防止・法令上の義務などのため保持が必要な情報をご案内します。外部サービスには各事業者の保持ルールが適用されます。端末内の記録削除と同時に、すべての情報が直ちに削除されることを約束するものではありません。</p></li>
+<li><h3>国外での処理・ポリシーの更新</h3><p>外部サービス事業者は、それぞれの規約や適用される保護措置に従って、お住まいの国以外で情報を処理する場合があります。情報の取扱いを変更する際は本ポリシーを更新し、このページに改定日を表示します。プライバシーに関するご質問は上記窓口へお問い合わせください。</p></li>
+</ol></div>
+      <h2 id="terms-ja">利用規約・サービスの説明</h2>
+      <div class="box"><ol class="legal-list">
+<li><h3>使用許諾契約</h3><p>EmoTikには<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple標準EULA（使用許諾契約）</a>を適用します。以下はアプリの機能や購入に関する説明であり、Apple標準EULAを置き換えたり、適用法令に基づく権利を制限したりするものではありません。</p></li>
+<li><h3>AIによる振り返り</h3><p>AIの生成結果には誤りや、ご状況に適さない内容が含まれる場合があります。個人の振り返りのための視点を提供するものであり、医療・心理その他の専門的な診断や治療ではありません。緊急の支援が必要な場合は、地域の救急窓口や適切な専門家へご相談ください。</p></li>
+<li><h3>無料利用とTik</h3><p>通常解析は日本時間を基準に1日1回無料です。その後の通常解析は、成功した場合に1 Tikを使用します。Tikを使う解析では開始前に確認を表示します。1 Tikで通常解析1回とそれに対するDeep Diveを利用でき、Deep Diveの追加Tik消費はありません。利用にはインターネット接続が必要であり、通信や外部サービスの状況により利用できない場合があります。</p></li>
+<li><h3>購入の種類と価格</h3><p>Tikは5 Tik・15 Tik・30 Tikの消耗型商品です。Colorsは別売りのカラーテーマ用の買い切り非消耗型商品であり、サブスクリプションや無制限の解析プランではありません。価格と適用される税は、お住まいの地域のApp Store購入確認画面に表示されます。決済はAppleが処理します。</p></li>
+<li><h3>復元と購入のお問い合わせ</h3><p>購入済みのColorsは、購入時と同じApple Accountを使用して復元できます。消耗型のTikはサーバーで残高を管理し、「購入を復元」によって再付与されるものではありません。購入の反映には時間差が生じる場合があります。残高や利用権限に問題がある場合は<a href="mailto:emotikhelpdesk@outlook.jp">emotikhelpdesk@outlook.jp</a>へご連絡ください。App Storeでの購入の返金申請は、<a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener noreferrer">Appleの返金手続き</a>をご利用ください。返金の可否はAppleの判断と適用法令に従います。</p></li>
+<li><h3>保存した記録</h3><p>日記の履歴は端末内に保存されます。アプリの再インストールや購入の復元によって、日記の履歴が戻るとは限りません。購入の復元と記録の復旧は別のものです。</p></li>
+</ol></div>
+    </section>
+</main>
 
 
   <footer>
@@ -1032,38 +708,30 @@ footer strong {
 
   <script>
     function switchLanguage(language) {
-      const englishSection =
-        document.getElementById("englishSection");
-
-      const japaneseSection =
-        document.getElementById("japaneseSection");
-
-      const englishButton =
-        document.getElementById("englishButton");
-
-      const japaneseButton =
-        document.getElementById("japaneseButton");
-
-
-      if (language === "ja") {
-        englishSection.classList.remove("active");
-        japaneseSection.classList.add("active");
-
-        englishButton.classList.remove("active");
-        japaneseButton.classList.add("active");
-
-        document.documentElement.lang = "ja";
-
-      } else {
-        japaneseSection.classList.remove("active");
-        englishSection.classList.add("active");
-
-        japaneseButton.classList.remove("active");
-        englishButton.classList.add("active");
-
-        document.documentElement.lang = "en";
+      const selected = language === 'ja' ? 'ja' : 'en';
+      for (const [code, name] of [['en', 'english'], ['ja', 'japanese']]) {
+        const active = code === selected;
+        const section = document.getElementById(name + 'Section');
+        const button = document.getElementById(name + 'Button');
+        section.hidden = !active;
+        section.classList.toggle('active', active);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      }
+      document.documentElement.lang = selected;
+      const current = location.hash.match(/^#(support|faq|privacy|terms)-(en|ja)$/);
+      if (current && current[2] !== selected) {
+        history.replaceState(null, '', '#' + current[1] + '-' + selected);
       }
     }
+    function followSectionLink() {
+      const match = location.hash.match(/^#(support|faq|privacy|terms)-(en|ja)$/);
+      if (!match) return;
+      switchLanguage(match[2]);
+      document.getElementById(match[1] + '-' + match[2]).scrollIntoView();
+    }
+    window.addEventListener('hashchange', followSectionLink);
+    followSectionLink();
   </script>
 
 </body>
